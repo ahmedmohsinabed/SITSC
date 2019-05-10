@@ -4,12 +4,12 @@ close all
 
 %% Initialization
 Test=0; % for right key encryption
-Test=1; % for key sensitivity test
+%Test=1; % for key sensitivity test
 addpath functions
 Images_Path='Images\Original\';
 fname={'Lena','baboon','panda'}; % filename
 ext='.jpg';
-fid=3; % file ID 1 for lena
+fid=1; % file ID 1 for lena
 IS =256; % Image size
 Data=imread(strcat(Images_Path,fname{fid},ext));
 if (size(Data,3)==3)
