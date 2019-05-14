@@ -57,21 +57,21 @@ key_1{9,3}=[key_1{8,3}(:,1)',flipdim(key_1{8,3}(:,2)',2),key_1{8,3}(:,3)',...
     flipdim(key_1{8,3}(:,4)',2)];
 key_1{9,4}=[key_1{8,4}(1,:),key_1{8,4}(2,:),key_1{8,4}(3,:),key_1{8,4}(4,:)];
 
-a=key_1{9,1};
-b=key_1{9,2};
-ab=xor(~a,b);
+A=key_1{9,1};
+B=key_1{9,2};
+E=xor(~A,B);
 % For Final KEY K1
-a=key_1{9,1};
-K1=xor(a,ab);
+A=key_1{9,1};
+K1=xor(A,E);
 % For Final KEY K2
-b=key_1{9,2};
-K2=xor(b,ab);
+B=key_1{9,2};
+K2=xor(B,E);
 % For Final KEY K3
-c=key_1{9,3};
-K3=xor(c,ab);
+C=key_1{9,3};
+K3=xor(C,E);
 % For Final KEY K4
-d=key_1{9,4};
-K4=xor(d,ab);
+D=key_1{9,4};
+K4=xor(D,E);
 % For Final KEY K5
 tmp=not(xor(K1,K2));
 tmp1=xor(K3,K4);
